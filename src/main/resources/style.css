@@ -1,0 +1,93 @@
+#playbutton
+{
+    -fx-background-color: transparent;
+    -fx-border-radius: 50px;
+}
+#playbutton:hover
+{
+    -fx-background-color: #5EE84C;
+    -fx-border-radius: 50px;
+}
+.textfield-design
+{
+    -fx-background-color: transparent;
+    -fx-border-color: #97E9EF;
+}
+.textfield-design:hover
+{
+    -fx-background-color:#97E9EF ;
+}
+#minusbutton
+{
+   -fx-background-color: transparent;
+}
+#minusbutton:hover
+{
+   -fx-background-color: #97E9EF;
+}
+#exitbutton
+{
+   -fx-background-color: transparent;
+}
+#exitbutton:hover
+{
+   -fx-background-color: #B30B00;
+}
+#backbutton
+{
+    -fx-background-color: transparent;
+}
+#backbutton:hover
+{
+    -fx-background-color: #FFF000;
+}
+#nextbutton
+{
+    -fx-background-color: transparent;
+}
+#nextbutton:hover
+{
+    -fx-background-color: #5EE84C;
+}
+#newbutton
+{
+    -fx-background-color: transparent;
+}
+#newbutton:hover
+{
+    -fx-background-color: #B24DED;
+}
+
+.scroll-pane
+{
+  -fx-background-color: transparent;
+  -fx-background-radius: 10px;
+  -fx-background-insets: 0;
+  -fx-padding: 0;
+  -fx-scrollbar-color: transparent transparent;
+}
+.scroll-pane:focused
+{
+  -fx-background-insets: 0;
+}
+.scroll-pane .corner
+{
+  -fx-background-insets: 0;
+}
+.scroll-pane> .viewport
+{
+  -fx-background-color: transparent;
+}
+.scrollable-element
+{
+  -fx-scrollbar-color: transparent transparent;
+}
+.scroll-bar:vertical
+{
+  -fx-background-color:transparent;
+}
+.scroll-bar:vertical .track
+{
+  -fx-background-color: transparent;
+  -fx-border-color: transparent;
+}

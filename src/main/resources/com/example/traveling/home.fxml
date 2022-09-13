@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.traveling.Controller">
+    <children>
+        <ImageView fitHeight="555.0" fitWidth="954.0" layoutX="24.0" layoutY="21.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../img/3990187.jpg" />
+         </image></ImageView>
+        <AnchorPane fx:id="playAnchor" layoutX="367.0" layoutY="228.0" opacity="0.69" prefHeight="113.0" prefWidth="268.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #000000;">
+            <children>
+                <VBox alignment="CENTER" layoutX="-2.0" prefHeight="125.0" prefWidth="272.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                    <children>
+                        <Label alignment="CENTER" prefHeight="81.0" prefWidth="270.0" text="Veuillez preciser le nombre de ville:">
+                            <font>
+                                <Font name="Comic Sans MS" size="15.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="playTextfield" alignment="CENTER" prefHeight="25.0" prefWidth="237.0" promptText="Nombre des villes" styleClass="textfield-design" stylesheets="@../../../style.css" />
+                        <Button id="playbutton" fx:id="playButton" mnemonicParsing="false" onAction="#handleButton" prefHeight="58.0" prefWidth="272.0" stylesheets="@../../../style.css">
+                            <graphic>
+                                <FontAwesomeIcon fill="#cdcdcd" iconName="CHECK" size="30" />
+                            </graphic>
+                            <VBox.margin>
+                                <Insets bottom="2.0" />
+                            </VBox.margin>
+                        </Button>
+                    </children>
+                </VBox>
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="dataPane" layoutX="467.0" layoutY="22.0" opacity="0.75" prefHeight="555.0" prefWidth="512.0" style="-fx-background-color: transparent;" visible="false" AnchorPane.bottomAnchor="23.0" AnchorPane.leftAnchor="467.0" AnchorPane.rightAnchor="21.0" AnchorPane.topAnchor="22.0">
+            <children>
+            <VBox alignment="CENTER" layoutX="3.0" layoutY="4.0" prefHeight="548.0" prefWidth="501.0" style="-fx-background-color: transparent;">
+               <children>
+                  <AnchorPane fx:id="anchorMat" prefHeight="320.0" prefWidth="393.0" style="-fx-background-color: transparent; -fx-border-color: #000000;" />
+                      <Button id="playbutton" fx:id="runbutton" mnemonicParsing="false" onAction="#handleButton" prefHeight="25.0" prefWidth="526.0" stylesheets="@../../../style.css">
+                          <graphic>
+                              <FontAwesomeIcon fill="#229142" iconName="PLAY" size="20" />
+                          </graphic>
+                      </Button>
+               </children>
+            </VBox>
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="arbPane" layoutX="24.0" layoutY="22.0" opacity="0.5" prefHeight="555.0" prefWidth="954.0" style="-fx-background-color: transparent;" visible="false">
+         <children>
+            <ScrollPane prefHeight="555.0" prefWidth="477.0" stylesheets="@../../../style.css">
+              <content>
+                <AnchorPane fx:id="arbreScroll" minHeight="0.0" minWidth="0.0" prefHeight="655.0" prefWidth="952.0" style="-fx-background-color: transparent;" />
+              </content>
+            </ScrollPane>
+            <ImageView fx:id="Arb" fitHeight="230.0" fitWidth="247.0" layoutX="-25.0" layoutY="307.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../../img/paps.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+        <AnchorPane fx:id="circuitPane" layoutX="500.0" layoutY="22.0" opacity="0.5" prefHeight="555.0" prefWidth="477.0" style="-fx-background-color: transparent;" visible="false" />
+      <HBox layoutX="874.0" layoutY="-3.0" prefHeight="25.0" prefWidth="104.0">
+         <children>
+            <Button id="minusbutton" fx:id="minusButton" mnemonicParsing="false" onAction="#handleButton" prefHeight="7.0" prefWidth="52.0" stylesheets="@../../../style.css">
+               <graphic>
+                  <FontAwesomeIcon fill="#595959" iconName="MINUS" />
+               </graphic>
+            </Button>
+            <Button id="exitbutton" fx:id="exitButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleButton" prefHeight="7.0" prefWidth="52.0" stylesheets="@../../../style.css">
+               <graphic>
+                  <FontAwesomeIcon fill="#595959" iconName="TIMES" />
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+      <AnchorPane fx:id="alertAnchor" layoutX="359.0" layoutY="102.0" prefHeight="126.0" prefWidth="283.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #000000;" visible="false">
+         <children>
+            <VBox alignment="CENTER" layoutX="5.0" prefHeight="117.0" prefWidth="268.0" spacing="7.0">
+               <children>
+                  <ImageView fitHeight="65.0" fitWidth="113.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/al.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets top="3.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <Label text="Veuillez entrer une valeur valable" />
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <ImageView fx:id="boussol" fitHeight="215.0" fitWidth="266.0" layoutX="732.0" layoutY="362.0" opacity="0.76" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../../img/thumb.png" />
+         </image>
+      </ImageView>
+      <HBox layoutX="25.0" layoutY="-3.0" prefHeight="25.0" prefWidth="191.0">
+         <children>
+            <Button id="newbutton" fx:id="newButton" mnemonicParsing="false" onAction="#handleButton" prefHeight="24.0" prefWidth="50.0" stylesheets="@../../../style.css" visible="false">
+               <graphic>
+                  <FontAwesomeIcon iconName="DESKTOP" />
+               </graphic>
+            </Button>
+            <Button id="backbutton" fx:id="backButton" mnemonicParsing="false" onAction="#handleButton" prefHeight="25.0" prefWidth="65.0" stylesheets="@../../../style.css" visible="false">
+               <graphic>
+                  <FontAwesomeIcon iconName="BACKWARD" />
+               </graphic>
+            </Button>
+            <Button id="nextbutton" fx:id="nextButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleButton" prefHeight="25.0" prefWidth="65.0" stylesheets="@../../../style.css" visible="false">
+               <graphic>
+                  <FontAwesomeIcon iconName="FORWARD" />
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+      <ImageView fx:id="def" fitHeight="137.0" fitWidth="434.0" layoutX="15.0" layoutY="451.0" pickOnBounds="true" visible="false">
+         <image>
+            <Image url="@../../../img/def.png" />
+         </image>
+      </ImageView>
+    </children>
+</AnchorPane>
